@@ -202,6 +202,26 @@ h2 .idx{ font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--tea
 }
 .entry p{ color:var(--text-muted); margin:0 0 12px; max-width:56ch; }
 .entry p:last-child{ margin-bottom:0; }
+.entry ul.entry-bullets{
+  list-style:none;
+  padding:0;
+  margin:0;
+  max-width:60ch;
+}
+.entry ul.entry-bullets li{
+  color:var(--text-muted);
+  position:relative;
+  padding-left:16px;
+  margin-bottom:9px;
+}
+.entry ul.entry-bullets li:last-child{ margin-bottom:0; }
+.entry ul.entry-bullets li::before{
+  content:"–";
+  position:absolute;
+  left:0;
+  color:var(--teal);
+}
+.entry ul.entry-bullets strong{ color:var(--text); font-weight:500; }
 @media (max-width:560px){
   .entry{ grid-template-columns:1fr; gap:6px; }
 }
